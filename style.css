@@ -1,0 +1,117 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --accent: #bb86fc;
+    --tier1: #4caf50;
+    --tier2: #2196f3;
+    --tier3: #ff9800;
+    --tier4: #f44336;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Scores */
+.game-header {
+    padding: 20px;
+    background: var(--card-bg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.player {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.player.active {
+    background: rgba(187, 134, 252, 0.2);
+    border: 1px solid var(--accent);
+}
+
+.player input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    width: 80px;
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Plate Grid */
+#plate-grid {
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    padding: 20px;
+}
+
+.plate-btn {
+    background: var(--card-bg);
+    border: 2px solid trasparent;
+    border-radius: 15px;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.plate-btn:active { transform: scale(0.95); }
+
+.plate-btn .flag { font-size: 2rem; }
+.plate-btn .name { font-size: 0.8rem; margin-top: 5px; opacity: 0.8; }
+.plate-btn .pts { font-weight: bold; color: var(--accent) }
+
+/* Color coding by points */
+.btn-tier-1 { border-color: var(--tier1); }
+.btn-tier-2 { border-color: var(--tier2); }
+.btn-tier-3 { border-color: var(--tier3); }
+.btn-tier-4 { border-color: var(--tier4); }
+
+/* Footer Controls */
+.controls {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    background: var(--card-bg);
+}
+
+.controls button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+#reset-btn { background: #b00020; }
