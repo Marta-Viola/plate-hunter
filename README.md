@@ -23,6 +23,7 @@ The rules are simple:
 
 ## How to Play
 The app is hosted via Github Pages. Simply open the link on your mobile browser, "Add to Home Screen" for the best experience, and start hunting!
+[Click Here!](https://marta-viola.github.io/plate-hunter/)
 
 ---
 *Status: Work in Progress - More features like History Logs and Player Customization coming soon.*
